@@ -3,6 +3,13 @@ import {ActivatedRoute, RouterLink} from '@angular/router';
 import { SitterService} from '../Services/sitter.service';
 import { PetSitter} from '../Shared/pet-sitter';
 import {NgIf} from '@angular/common';
+import {AgePipePipe} from '../pipes/age-pipe.pipe';
+import {ExperoencePipePipe} from '../pipes/experoence-pipe.pipe';
+import {RatingPipePipe} from '../pipes/rating-pipe.pipe';
+import {HighlightDirectiveDirective} from '../directives/highlight-directive.directive';
+import {SatusDirectiveDirective} from '../directives/satus-directive.directive';
+import {MatCard, MatCardActions, MatCardContent, MatCardHeader, MatCardModule} from '@angular/material/card';
+import {MatAnchor, MatButtonModule} from '@angular/material/button';
 
 @Component({
   selector: 'app-sitter-detail',
@@ -10,7 +17,19 @@ import {NgIf} from '@angular/common';
   styleUrls: ['./sitter-detail.component.scss'],
   imports: [
     NgIf,
-    RouterLink
+    RouterLink,
+    AgePipePipe,
+    ExperoencePipePipe,
+    RatingPipePipe,
+    HighlightDirectiveDirective,
+    SatusDirectiveDirective,
+    MatCard,
+    MatCardHeader,
+    MatCardContent,
+    MatCardActions,
+    MatAnchor,
+    MatCardModule,
+    MatButtonModule
   ],
   standalone: true
 })
